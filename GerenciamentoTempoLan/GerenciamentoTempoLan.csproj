@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EEEB117-6B26-4375-AE46-2A154A72CEF5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GerenciamentoTempoLan</RootNamespace>
+    <AssemblyName>GerenciamentoTempoLan</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Hopstarter-Soft-Scraps-Clock.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classe\ClassCliente.cs" />
+    <Compile Include="Classe\ClassGerenciarTempo.cs" />
+    <Compile Include="Classe\ClassSecurity.cs" />
+    <Compile Include="Classe\ClassSecurityPassword.cs" />
+    <Compile Include="Classe\ClassUsuario.cs" />
+    <Compile Include="FrmAutenticarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutenticarUsuario.designer.cs">
+      <DependentUpon>FrmAutenticarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCarregamentoSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCarregamentoSistema.designer.cs">
+      <DependentUpon>FrmCarregamentoSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfirmarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfirmarSenha.designer.cs">
+      <DependentUpon>FrmConfirmarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConversao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConversao.Designer.cs">
+      <DependentUpon>FrmConversao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOpcaoDiretorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOpcaoDiretorio.designer.cs">
+      <DependentUpon>FrmOpcaoDiretorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisarClienteTempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisarClienteTempo.Designer.cs">
+      <DependentUpon>frmPesquisarClienteTempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroCliente.Designer.cs">
+      <DependentUpon>FrmCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGerenciarTempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGerenciarTempo.Designer.cs">
+      <DependentUpon>FrmGerenciarTempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGravarTempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGravarTempo.Designer.cs">
+      <DependentUpon>FrmGravarTempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPesquisarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPesquisarCliente.Designer.cs">
+      <DependentUpon>FrmPesquisarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRetirar_adicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRetirar_adicionar.Designer.cs">
+      <DependentUpon>FrmRetirar_adicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSair.designer.cs">
+      <DependentUpon>FrmSair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTelaPrincipal.Designer.cs">
+      <DependentUpon>FrmTelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarioSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarioSistema.designer.cs">
+      <DependentUpon>FrmUsuarioSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAutenticarUsuario.resx">
+      <DependentUpon>FrmAutenticarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCarregamentoSistema.resx">
+      <DependentUpon>FrmCarregamentoSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfirmarSenha.resx">
+      <DependentUpon>FrmConfirmarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConversao.resx">
+      <DependentUpon>FrmConversao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOpcaoDiretorio.resx">
+      <DependentUpon>FrmOpcaoDiretorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisarClienteTempo.resx">
+      <DependentUpon>frmPesquisarClienteTempo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroCliente.resx">
+      <DependentUpon>FrmCadastroCliente.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGerenciarTempo.resx">
+      <DependentUpon>FrmGerenciarTempo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGravarTempo.resx">
+      <DependentUpon>FrmGravarTempo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPesquisarCliente.resx">
+      <DependentUpon>FrmPesquisarCliente.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRetirar_adicionar.resx">
+      <DependentUpon>FrmRetirar_adicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSair.resx">
+      <DependentUpon>FrmSair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTelaPrincipal.resx">
+      <DependentUpon>FrmTelaPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarioSistema.resx">
+      <DependentUpon>FrmUsuarioSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutterstock_223373068-810x440.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-validated-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binoculars-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-list-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hopstarter-Soft-Scraps-Clock.ico" />
+    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-Clients.ico" />
+    <None Include="Resources\save-icon 32x32.png" />
+    <None Include="Resources\Button-Cancel-icon24x24.png" />
+    <None Include="Resources\Login-icon.png" />
+    <None Include="Resources\Button-Delete-icon 32x32.png" />
+    <None Include="Resources\LAS Technology.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
